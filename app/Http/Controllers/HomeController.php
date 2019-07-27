@@ -1,6 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Customer;
+use App\User;
+use App\Transport;
+
 
 use Illuminate\Http\Request;
 
@@ -23,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $transports = Transport::orderBy('created_at', 'desc')->get();
+        return view('home' , compact( 'transports'));
     }
 }
