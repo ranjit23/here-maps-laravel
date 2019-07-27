@@ -40,4 +40,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Transport::class);
     }
+    public function customer()
+    {
+        return $this->hasMany(Customer::class);
+    }
 }
