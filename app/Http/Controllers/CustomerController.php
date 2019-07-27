@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Transport;
+
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
