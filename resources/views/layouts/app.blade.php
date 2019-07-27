@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
+   
+    
+
+
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="Enroot mumbai, em, mumbai, Enroot, problem, solutions, enrt mmbai, mumbai solution, blog, blog, Enroot blogs, engineer blogs, social blogs">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- ======= Bootstrap CSS ======= -->
+	<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}"> 
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- ======= Font Awesome CSS ======= -->
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
+
+    <!-- ======= Owl Carousel CSS ======= -->
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}">
+
+    <!-- ======= Magnific Popup CSS ======= -->
+	
+    <link rel="stylesheet" href="{{ URL::asset('css/magnific-popup.min.css') }}">
+
+    <!-- ======= Main Stylesheet ======= -->
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+
+    <!-- ======= Custom Stylesheet ======= -->
+    <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
+
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    
+
+     <!-- Header Begin -->
+     <header class="header fixed-top">
+        <!-- Header Style One Begin -->
+        <div class="fixed-top header-main style--one">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-sm-4 col-8">
+                        <!-- Logo Begin -->
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="default-logo" src="{{ URL::asset('img/logo.png') }}" data-rjs="2" alt="">
+                                <img class="sticky-logo" src="{{ URL::asset('img/sticky_logo.png') }}" data-rjs="2" alt="">
+                            </a>
+                        </div>
+                        <!-- Logo End -->
+                    </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <div class="col-lg-9 col-sm-8 col-4">
+                        <!-- Main Menu Begin -->
+                        <div class="main-menu d-flex align-items-center justify-content-end">
+                            <ul class="nav align-items-center">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">Home</a>
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="index.html">Landing Page</a></li>
+                                        <li><a href="home-1.html">home v1</a></li>
+                                        <li><a href="home-2.html">home v2</a></li>
+                                    </ul> -->
                                 </li>
+                                
+                                <li class="menu-item-has-children">
+                                    <a href="projects.html">Events</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="projects.html">Events Details</a></li>
+                                        <li><a href="project-details.html">project details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">Team</a>
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+ -->                                </li>
+                                <li class="current-menu-parent menu-item-has-children">
+                                    <a href="blog.html">Blog</a>
+                                    <!-- <ul class="sub-menu">
+                                        <li class="current-menu-item"><a href="blog.html">Blog Default</a></li>
+                                        <li><a href="blog-single-column.html">Blog Single Colunm</a></li>
+                                        <li><a href="blog-two-column.html">Blog two Colunm</a></li>
+                                        <li><a href="blog-with-sidebar.html">Blog with Sidebar</a></li>
+                                        <li><a href="blog-details.html">blog details</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <ul class="navbar-nav ml-auto">
+                         <!-- Authentication Links -->
+                        @guest
+                        <ul class="nav align-items-center">
+                                <li class="menu-item-has-children">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="index.html">Landing Page</a></li>
+                                        <li><a href="home-1.html">home v1</a></li>
+                                        <li><a href="home-2.html">home v2</a></li>
+                                    </ul> -->
+                                </li>
+                            
+                            @if (Route::has('register'))
+                            <ul class="nav align-items-center">
+                                <li class="menu-item-has-children">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="index.html">Landing Page</a></li>
+                                        <li><a href="home-1.html">home v1</a></li>
+                                        <li><a href="home-2.html">home v2</a></li>
+                                    </ul> -->
+                                </li>
+                                
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -66,15 +147,25 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest 
                     </ul>
+                            </ul>
+                            <!-- Offcanvas Holder Trigger -->
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            <!-- Offcanvas Trigger End -->
+                        </div>
+                        <!-- Main Menu ENd -->
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <main class="py-4">
+        </div>
+        <!-- Header Style One End -->
+    </header>
+    <!-- Header End -->
+    <main class="py-4">
             @yield('content')
         </main>
-    </div>
 </body>
 </html>
