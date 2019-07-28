@@ -29,5 +29,9 @@ class HomeController extends Controller
     {
         $transports = Transport::orderBy('created_at', 'desc')->get();
         return view('home' , compact( 'transports'));
+        $forecast = [];
+        return view('forecastview', ["forecast" => $forecast]);
+        $geolocation = [];
+        return view('geolocationview', ["geolocation" => $geolocation]);
     }
 }

@@ -157,23 +157,7 @@ crossorigin="anonymous"></script>
 
    
     
-    <!-- Page Title Begin -->
-    <section class="page-title-bg pt-250 pb-100" data-bg-img="{{ URL::asset('img/section-pattern/page-title.png') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-title text-center">
-                        <h2>Blog</h2>
-                        <ul class="list-inline">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Blog</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Page Title End -->
+   
 
     <!-- Blog Begin -->
 	@foreach ($transports as $transport)
@@ -229,6 +213,76 @@ crossorigin="anonymous"></script>
         </div>
         @endforeach
     </section>
+
+
+<script>
+const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+
+const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+   extended: true
+}));
+
+//HERE credentials
+const here = {
+   id: 'dbzXQJktFSAh5FxYGSnJ',
+   code: 'FZ7Iz4AwrCj-UG5nwJFDTg',
+   token: 'HERE_XYZ_TOKEN'
+}
+
+
+
+const source = 'Mumbai';
+const destination='Delhi';
+const source_geo = `https://geocoder.api.here.com/6.2/geocode.json?app_id=${here.id}&app_code=${here.code}&searchtext=${source}`;
+const destination_geo = `https://geocoder.api.here.com/6.2/geocode.json?app_id=${here.id}&app_code=${here.code}&searchtext=${destination}`;
+
+request.get(source_geo, (error, response, body) => {
+   const source_geocodeJson = JSON.parse(body);
+    const source_coordinates = {
+      lat: source_geocodeJson.Response.View[0].Result[0].Location.DisplayPosition.Latitude,
+      long: source_geocodeJson.Response.View[0].Result[0].Location.DisplayPosition.Longitude,
+    
+   };
+
+   console.log(source_coordinates)
+});
+
+request.get(destination_geo, (error, response, body) => {
+   const destination_geocodeJson = JSON.parse(body);
+   const destination_coordinates = {
+      lat: destination_geocodeJson.Response.View[0].Result[0].Location.DisplayPosition.Latitude,
+      long: destination_geocodeJson.Response.View[0].Result[0].Location.DisplayPosition.Longitude,
+    
+   };
+   console.log(destination_coordinates)
+});
+
+
+ const waypoint= `http://fleet.api.here.com/2/calculateroute.json?app_id=${here.id}&app_code=${here.code}&mode=fastest;truck;traffic:disabled&departure=now&tollVehicleType=9&routeMatch=1&vehicleWeight=1t&waypoint0=50.10992,8.69030&waypoint1=50.00658,8.29096`;
+
+ request.get(waypoint, (error, response, body) => {
+    
+   const wps_json= JSON.parse(body);
+   const wps_route={
+      source : wps_json.response.route[0].waypoint[0].mappedPosition,
+      destination : wps_json.response.route[0].waypoint[1].mappedPosition
+
+
+   };
+   console.log(wps_route)
+
+   const optimum_path =`http://route.api.here.com/routing/7.2/calculateroute.json?app_id=${here.id}&app_code=${here.code}&waypoint0=${wps_route.source.latitude,wps_route.source.longitude}&waypoint1=${wps_route.destination.latitude,wps_route.destination.longitude}`;
+
+
+ });
+    </script>
+
+
     <!-- Blog End -->
 	
 	 <!-- Back to Top End -->

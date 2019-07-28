@@ -62,21 +62,8 @@ crossorigin="anonymous"></script>
                                     </ul> -->
                                 </li>
                                 
-                                <li class="menu-item-has-children">
-                                    <a href="projects.html">Events</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="projects.html">Events Details</a></li>
-                                        <li><a href="project-details.html">project details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="about.html">Team</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                    </ul>
- -->                                </li>
+                                
+                               
                                 <li class="current-menu-parent menu-item-has-children">
                                     <a href="blog.html">Blog</a>
                                     <!-- <ul class="sub-menu">
@@ -158,22 +145,7 @@ crossorigin="anonymous"></script>
    
     
     <!-- Page Title Begin -->
-    <section class="page-title-bg pt-250 pb-100" data-bg-img="{{ URL::asset('img/section-pattern/page-title.png') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-title text-center">
-                        <h2>Blog</h2>
-                        <ul class="list-inline">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Blog</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Page Title End -->
+  
 
     <!-- Blog Begin -->
 	@foreach ($transports as $transport)
@@ -214,7 +186,7 @@ crossorigin="anonymous"></script>
                         <!-- Blog Button Begin -->
                         <div class="blog-button position-absolute w-100 d-flex align-items-center justify-content-center" data-bg-img="">
                             <img src="{{ URL::asset('img/shapes/blog-shape.svg') }}" class="svg" alt="">
-                            <a href="/transports/{{$transport->id}}" class="btn-inline">Read More</a>
+                            <a href="/customers/create" class="btn-inline">PAY</a>
                         </div>
                         <!-- Blog Button End -->
                     </div>

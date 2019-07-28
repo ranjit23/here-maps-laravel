@@ -20,3 +20,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('transports','TransportController');
 Route::resource('customers','CustomerController');
+Route::get('/apis', 'ApiController@index');
+Route::get('/map', function(){
+    return view('mapview');
+});
+Route::get('/route', function(){
+    return view('route');
+});
+Route::get('/demand', function(){
+    return view('demand');
+});
+
+
