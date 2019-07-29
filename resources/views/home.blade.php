@@ -176,12 +176,12 @@ crossorigin="anonymous"></script>
                         <!-- Blog Content Begin -->
                         <div class="blog-content">
                             <p class="posted-on">{{$transport->created_at}}</p>
-                            <p class="category">{{$transport->route_a}} to </p>
+                            <h3 class="category">{{$transport->route_a}} to </h3>
                     
                             <h3 class="blog-title">{{$transport->route_b}}</h3>
-                            <h3 class="blog-title">LENGTH:{{$transport->available_length}}</h3>
-                            <h3 class="blog-title">BREADTH:{{$transport->available_breadth}}</h3>
-                            <h3 class="blog-title">HEIGHT:{{$transport->available_height}}</h3>
+                            <p class="blog-title">Available length:{{$transport->available_length}}</p>
+                            <p class="blog-title">Available breadth:{{$transport->available_breadth}}</p>
+                            <p class="blog-title">Available height:{{$transport->available_height}}</p>
 
                     
                             <p class="blog-excerpt"></p>
@@ -192,7 +192,7 @@ crossorigin="anonymous"></script>
                         <!-- Blog Hover Begin -->
                         <div class="blog-hover text-center text-white position-absolute w-100 h-100 d-flex align-items-center justify-content-center bg-overlay"
                             data-bg-img="assets/img/blog/blog-1.jpg">
-                            <h3 class="blog-title"><a href="#">{{$transport->company_name}}</a></h3>
+                            <h3 class="blog-title"><a href="#">Company Name: {{$transport->company_name}}</a></h3>
                         </div>
 						
                         <!-- Blog Hover End -->

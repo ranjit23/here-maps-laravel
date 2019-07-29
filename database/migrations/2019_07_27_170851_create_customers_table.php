@@ -17,7 +17,6 @@ class CreateCustomersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('transport_id')->references('id')->on('transports')->onDelete('cascade');
             $table->string('name');
             $table->integer('contact_no');
             $table->string('type_of_good');

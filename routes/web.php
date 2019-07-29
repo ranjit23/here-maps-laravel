@@ -30,5 +30,8 @@ Route::get('/route', function(){
 Route::get('/demand', function(){
     return view('demand');
 });
+Route::get('/geo', function(){
+    return view('geo');
+});
 
 

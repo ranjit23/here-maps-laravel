@@ -78,32 +78,7 @@
                                     </ul> -->
                                 </li>
                                 
-                                <li class="menu-item-has-children">
-                                    <a href="projects.html">Events</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="projects.html">Events Details</a></li>
-                                        <li><a href="project-details.html">project details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="about.html">Team</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                    </ul>
- -->                                </li>
-                                <li class="current-menu-parent menu-item-has-children">
-                                    <a href="blog.html">Blog</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li class="current-menu-item"><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-single-column.html">Blog Single Colunm</a></li>
-                                        <li><a href="blog-two-column.html">Blog two Colunm</a></li>
-                                        <li><a href="blog-with-sidebar.html">Blog with Sidebar</a></li>
-                                        <li><a href="blog-details.html">blog details</a></li>
-                                    </ul> -->
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+                               <li><a href="contact.html">Contact</a></li>
                                 <ul class="navbar-nav ml-auto">
                          <!-- Authentication Links -->
                         @guest
